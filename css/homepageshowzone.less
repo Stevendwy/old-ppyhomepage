@@ -1,0 +1,464 @@
+// out: ./homepageshowzone.css, compress: true
+
+@import "base";
+
+@fontSize: 18px;
+@glass: #fff;
+
+.ShowZoneContainer {
+    .relative;
+    .sizeFullWidth;
+    min-width: 1024px;
+	text-align: center;
+    .ShowZoneBackgroudImg {
+        .relative;
+        width: 67%;
+        margin-top: 240px;
+    }
+
+    .ShowZone {
+        .absolute;
+        .sizeFull;
+        z-index: @zOne;
+
+        @usefulheight: @pTen * 8;
+        @borderLine: 1px solid @bColor;
+
+        .glass {
+            background: #fff;
+        }
+
+        .ShowZoneHeaderContainer {
+            .relative;
+            .glass;
+            height: @usefulheight;
+            border-bottom: @borderLine;
+            .logoHeader{
+                float: left;
+                text-align: left;
+                height: 80px;
+                margin-left: 15px;
+                font-size: 14px;
+                color: #333333;
+				text-align: left;
+                .ShowZoneHeaderLogo {
+                    height: 22px;
+                    width: 100px;
+                    margin-top:16px;
+                    cursor: pointer;
+
+                }
+                .chooseHeader{
+                    div{
+                        cursor: pointer;
+                        float: left;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                    }
+                }
+
+
+            }
+            .ShowZoneHeaderButtonsContainers {
+                    float: right;
+                    font-size: 14px;
+                    div{
+                        float: right;
+                        cursor: pointer;
+                        margin:18px 20px;
+						position: relative;
+						top: 14px;
+                    }
+                    color: #333333;
+            }
+
+        }
+
+        @usefulwidth: @pTen * 55;
+        @leftcenter: "calc(50% - 275px)";
+
+        .ShowZoneSearchContainer {
+            .relative;
+            .rectLeft(e(@leftcenter), 6%, @usefulwidth, @pTen * 6);
+
+            .ShowZoneSearchRemind {
+                .absolute;
+                .rectLeft(55px, -30px, auto, 20px);
+                .color(#999)
+            }
+
+            .ShowZoneSearchLength {
+                .absolute;
+                .rectLeft(570px, 15px, auto, 20px);
+                .color(#999);
+            }
+
+            .ShowZoneSearchInput {
+                .relative;
+                .rect(0, 440px, 48px);
+                // .fontSize(@fontSize);
+                font-size: 14px;
+                padding-left: 10px;
+                border: 1px #979797 solid;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .ShowZoneSearchInput:hover {
+                // border: 1px @bColorActive solid;
+            }
+
+            .ShowZoneSearchInput:focus {
+                // border: 1px @bColorActive solid;
+            }
+
+            .ShowZoneSearchButton {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 110px;
+                height: 60px;
+                height: 48px;
+                font-size: 18px;
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #FFFFFF;
+                color: white;
+                background: #333;
+                border: 0;
+                cursor: pointer;
+
+            }
+
+            .ShowZoneSearchButton:active {
+                 border: 1px @bColorActive solid;
+            }
+        }
+
+        .ShowZoneNumberContainer {
+            .relative;
+            .glass;
+            .rectLeft(e(@leftcenter), e("calc(50% - 50px)"), @usefulwidth, @pTen * 14);
+            border: @borderLine;
+
+            .ShowZoneNumber {
+                .absolute;
+                .rectLeft(0, 0, @cFull, @cFull);
+
+                .inlineBlock {
+                    .relative;
+                    display: inline-block;
+                    width: @cOneThird;
+                    height: @cFull;
+                    text-align: center;
+                }
+
+                .number(@color: #fff) {
+                    .relative;
+                    top: 30px;
+                    line-height: 43px;
+                    .color(@color);
+                    font-size: 36px;
+                }
+
+                .title {
+                    .relative;
+                    .color(#666);
+                    top: 38px;
+                    line-height: 25px;
+                    font-size: 18px;
+                }
+
+                @carColor: #FF7300;
+                @brandColor: #3D7CFF;
+                @partColor: #50E3C2;
+
+                .ShowZoneNumberCarContainer {
+                    .inlineBlock;
+
+                    .ShowZoneNumberCar {
+                        .number(@carColor);
+                    }
+
+                    .ShowZoneNumberCarTitle {
+                        .title;
+                    }
+                }
+
+                .ShowZoneNumberBrandContainer {
+                    .inlineBlock;
+
+                    .ShowZoneNumberBrand {
+                        .number(@brandColor);
+                    }
+
+                    .ShowZoneNumberBrandTitle {
+                        .title;
+                    }
+                }
+
+                .ShowZoneNumberPartContainer {
+                    .inlineBlock;
+
+                    .ShowZoneNumberPart {
+                        .number(@partColor);
+                    }
+
+                    .ShowZoneNumberPartTitle {
+                        .title;
+                    }
+                }
+            }
+        }
+    }
+
+    .LoginFloatWindowContainer {
+        .fixed;
+        .size(@cFull, @cFull);
+        top: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        @loginLeft: "calc(50% - 184px)";
+
+        .LoginContainer {
+            .relative;
+            .rectLeft(e(@loginLeft), 140px, 368px, 296px);
+            background-color: white;
+			text-align: left;
+
+            @borderLineLogin: 1px @bColorLine solid;
+
+            .LoginHeader {
+                .relative;
+                .size(100%, 54px);
+                border-bottom: @borderLineLogin;
+
+                .LoginHeaderTitleImg {
+                    .relative;
+                    .rectLeft(120px, 0px, auto, auto);
+                }
+
+                .LoginHeaderCancle {
+                    .absolute;
+                    .rectRight(0, 0, 40px, 40px);
+                    background: url(/img/p_wo.png) 0 -600px;
+                    border: 0;
+                    outline: 0;
+                    cursor: pointer;
+                }
+
+                .LoginHeaderCancle:hover {
+                    background: url(/img/p_wo.png) 0 -480px;
+                }
+            }
+
+            .LoginContent {
+                .relative;
+                .size(100%, 241px);
+
+                .memberPosition {
+                    margin-top: 10px;
+                    left: 20px;
+                    border-radius: 4px;
+                }
+
+                .loginInput {
+                    .relative;
+                    .memberPosition;
+                    .size(315px, 40px);
+                    display: block;
+                    font-size: 14px;
+                    border: 1px @bColor solid;
+                    padding-left: 10px;
+                }
+
+                .LoginContentUserName {
+                    .loginInput;
+                }
+
+                .LoginContentUserName:hover {
+                    border: 1px @bColorActive solid;
+                }
+
+                .LoginContentUserName:focus {
+                    border: 1px @bColorActive solid;
+                }
+
+                .clear_username, .clear_password {
+                    position: absolute;
+                    right: 20px;
+                    .size(40px, 40px);
+                    background: url(/img/p_wo.png) 0 -680px;
+                    display: none;
+                    cursor: pointer;
+                }
+
+                .clear_username:hover, .clear_password:hover {
+                    .size(40px, 40px);
+                    background: url(/img/p_wo.png) 0 -640px;
+                }
+
+                .clear_username {
+                    top: 3px;
+                }
+
+                .clear_password {
+                    top: 57px;
+                }
+
+                .LoginContentUserPassword {
+                    .loginInput;
+                }
+
+                .LoginContentUserPassword:hover {
+                    border: 1px @bColorActive solid;
+                }
+
+                .LoginContentUserPassword:focus {
+                    border: 1px @bColorActive solid;
+                }
+
+                .loginRemember {
+                    .relative;
+                    .inlineBlock;
+                    margin-top: 10px;
+                }
+
+                .LoginContentRemember {
+                    .loginRemember;
+                    .size(14px, 14px);
+                    margin-left: 20px;
+                    border-radius: 4px;
+                    border: 1px @fcRemind solid;
+                }
+
+                .LoginContentRememberPassword {
+                    .loginRemember;
+                    .color(@fcRemind);
+                    font-size: 14px;
+                    top: -4px;
+                    margin-left: 10px;
+                }
+
+                .LoginContentButton {
+                    .relative;
+                    .block;
+                    .memberPosition;
+                    .size(328px, 40px);
+                    background-color: @buttonColor;
+                    border: 0;
+                    color: white;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+
+                .LoginContentForgetPassword {
+                    .relative;
+                    color: @buttonColor;
+                    // border-bottom: 1px @buttonColor solid;
+                    width: 70px;
+                    line-height: 16px;
+                    left: 20px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                .LoginContentRegistNow{
+                    position: relative;
+                    color: #1aa0f3;
+                    /* border-bottom: 1px #1aa0f3 solid; */
+                    /* width: 70px; */
+                    line-height: 16px;
+                    left: 282px;
+                    margin-top: -20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.MiddleContentMain{
+    min-width: 1024px;
+
+    .MiddleBanners{
+        background: #333;
+        display: flex;
+        align-items: center;
+        height: 436px;
+        justify-content: center;
+        .pcar{
+            width: 512px;
+            margin-right: 126px;
+        }
+        .pwen{
+            width: 330px;
+        }
+    }
+    .MiddleBannersMiddle{
+        height: 436px;
+        background: #fff;
+        .MiddleVinTitle{
+            height: 100px;
+            font-size: 36px;
+            color: #666666;
+            letter-spacing: 4px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .msgBanner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .appcode{
+                width: 240px;
+            }
+            .yearcard{
+                width: 400px;
+                margin-right: 135px;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+    .MiddleBannersBottom{
+        height: 320px;
+        background: #f2f2f2;
+        .ShowZoneNumberContainer{
+            display: flex;
+            height: 100%;
+            background: #f2f2f2;
+            .ShowZoneNumber{
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                &>div{
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    div:nth-child(1){
+                        font-size: 64px;
+                        color: #FEBA04;
+                        letter-spacing: 0px;
+                    }
+                    div:nth-child(2){
+                        font-size: 14px;
+                        color: #B4B4B4;
+                        letter-spacing: 0px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .MiddleBannersBottomNew{
+        height: 170px;
+        background: #fff;
+        position: relative;
+    }
+}
